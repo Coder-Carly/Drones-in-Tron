@@ -4,24 +4,27 @@
 
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-        <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>    
+        <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>   
+        
+        <script src="script.js"></script>
     </head>
     <body>
         <a-scene>
-            <a-camera position="-7 6 0" look-controls-enabled wasd-controls="acceleration: 200"></a-camera>
             <a-entity environment="groundColor: black; grid: cross; preset: tron;"></a-entity>
+            <a-camera position="-14 6 10" look-controls-enabled></a-camera>
+            
             <a-assets>
-                <a-asset-item id="lab" src="assets/scientific_lab/scene.gltf"></a-asset-item>
                 <a-asset-item id="drone1" src="assets/scifi_drone_1.1/scene.gltf"></a-asset-item>
                 <a-asset-item id="drone2" src="assets/s9_mini_drone/scene.gltf"></a-asset-item>
                 <a-asset-item id="drone3" src="assets/buster_drone/scene.gltf"></a-asset-item>
+                <a-asset-item id="drone4" src="assets/Sci-fi-Drone/scene.gltf"></a-asset-item>
 
             </a-assets>
-            <a-entity position="0 1 0" scale="3 2 3" gltf-model="#lab"></a-entity>
             <a-entity position="-7.3 7.8 -18.5" scale="0.005 0.005 0.005" gltf-model="#drone1" animation-mixer=""></a-entity>
-            <a-entity position="-21 3.5 -17" scale="0.5 0.5 0.5" gltf-model="#drone2" animation-mixer=""></a-entity>
+            <a-entity position="-21 3.5 -17" scale="0.5 0.5 0.5" gltf-model="#drone2" animation-mixer="" arrowfly></a-entity>
             <a-entity position="-35 2.5 -19" scale="1 1 1" gltf-model="#drone3" animation-mixer=""></a-entity>
+            <a-entity position="3.3 7.5 -17" scale="0.5 0.5 0.5" gltf-model="#drone4" animation-mixer=""></a-entity>
          </a-scene>
     </body>
 </html>
-    
+    <!--<a-entity environment="groundColor: black; grid: cross; preset: tron;"></a-entity>-->
